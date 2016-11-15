@@ -1,24 +1,12 @@
-# README
+# Companion app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A dating app where users can quickly check and rate other users.
 
-Things you may want to cover:
 
-* Ruby version
+## Technologies used
 
-* System dependencies
+Used some Javascript libraries for design purposes like JaznyBootstrap, Supersized Plugin, and more.
 
-* Configuration
+Login through Facebook app and get the users information.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Thanks for checkout the app!
