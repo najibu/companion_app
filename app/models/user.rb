@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   def self.create_user_from_facebook(auth)
     create(
-     # avatar: process_uri(auth['info']['image'] + "?width=9999"),
+     avatar: process_uri(auth['info']['image'] + "?width=9999"),
       email: auth['info']['email'],
       provider: auth['provider'],
       uid: auth['uid'],
