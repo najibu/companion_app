@@ -18,6 +18,14 @@
 
 <script>
 
+/**
+ * Set button action to trigger jTinder like & dislike.
+ */
+$('.actions .like, .actions .dislike').click(function(e){
+  e.preventDefault();
+  $("#tinderslide").jTinder($(this).attr('class'));
+});
+
 $("#tinderslide").jTinder({
     onDislike: function (item) {
         // alert('Dislike image ' + (item.index()+1));
@@ -33,5 +41,7 @@ $("#tinderslide").jTinder({
 });
 
 $("#tinderslide > ul li").tsort({attr: "id"});
+
+
   
 </script>
