@@ -4,6 +4,8 @@ class User < ApplicationRecord
                     :styles => { :medium => "370x370", :thumb => "100x100" }
    validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
+   default_scope { order("id DESC") }
+
   def self.sign_in_from_facebook(auth)
     find_by(provider: auth['provider'], uid: auth['uid']) || create_user_from_facebook(auth)
   end

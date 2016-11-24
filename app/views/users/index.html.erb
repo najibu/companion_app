@@ -20,10 +20,10 @@
 
 $("#tinderslide").jTinder({
     onDislike: function (item) {
-        alert('Dislike image ' + (item.index()+1));
+        // alert('Dislike image ' + (item.index()+1));
     },
     onLike: function (item) {
-        alert('Like image ' + (item.index()+1));
+        // alert('Like image ' + (item.index()+1));
     },
     animationRevertSpeed: 200,
     animationSpeed: 400,
@@ -31,5 +31,7 @@ $("#tinderslide").jTinder({
     likeSelector: '.like',
     dislikeSelector: '.dislike'
 });
+
+$("#tinderslide > ul li").tsort({attr: "id"});
   
 </script>
