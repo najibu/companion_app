@@ -20,5 +20,6 @@
 //= require jquery.transform2d
 //= require tinysort
 //= require jquery.tinysort
+//= require data-confirm-modal
 //= require_tree .
 

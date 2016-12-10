@@ -15,6 +15,13 @@
   </div>
 </div>
 
+<div class="spinner center_spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
 
 <script>
 
@@ -24,6 +31,11 @@
 $('.actions .like, .actions .dislike').click(function(e){
   e.preventDefault();
   $("#tinderslide").jTinder($(this).attr('class'));
+});
+$(".nav-btn").hover(function(){
+  $(this).addClass("active2");
+  }, function(){
+  $(this).removeClass("active2"); 
 });
 
 $("#tinderslide").jTinder({
