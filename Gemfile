@@ -61,3 +61,5 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem "paperclip", "~> 5.0.0"
 
 gem 'aws-sdk', '~> 2.3.0'
+
+gem 'simple_form'
