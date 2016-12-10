@@ -4,9 +4,9 @@ class UsersController < ApplicationController
 
   def index
     if params[:id]
-      @users = User.where('id < ?', params[:id]).limit(2)
+      @users = User.gender(current_user).where('id < ?', params[:id]).not_me(current_user).limit(10) - current_user.matches(current_user)
     else
-      @users = User.all.limit(2)
+      @users = User.gender(current_user).not_me(current_user).limit(10) - current_user.matches(current_user)
     end
     respond_to do |format|
       format.html 
