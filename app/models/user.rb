@@ -31,8 +31,8 @@ class User < ApplicationRecord
     self.friendships.create(friend: user_2)
   end
 
-  def accept_friendship
-    self.update_attributes(state: "active", friended_at: Time.now)
+  def accept_friendship(user2)
+    self.friendships.where(friend: user2).first.update_attribute(:state, "ACTIVE")
   end
 
   def remove_match(user_2)
