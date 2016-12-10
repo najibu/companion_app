@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login
-  before_action :set_user, only:[:edit, :profile, :update, :destroy]
+  before_action :set_user, only:[:edit, :profile, :update, :destroy, :get_email]
 
   def index
     if params[:id]
@@ -41,6 +41,12 @@ class UsersController < ApplicationController
       session[:omniauth] = nil 
     else
       redirect_to edit_user_path(@user)
+    end
+  end
+
+  def get_email
+    respond_to do |format|
+      format.js
     end
   end
 
