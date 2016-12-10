@@ -27,6 +27,23 @@ class User < ApplicationRecord
       )
   end
 
+  def request_match(user_2)
+    self.friendships.create(friend: user_2)
+  end
+
+  def accept_friendship
+    self.update_attributes(state: "active", friended_at: Time.now)
+  end
+
+  def remove_match(user_2)
+    inverse_friendships = inverse_friendships.where(user_id: user2).first 
+    if inverse_friendships
+      self.inverse_friendships.where(user_id: user2).first.destroy 
+    else
+      self.friendships.where(friend_id: user2).first.destroy 
+    end
+  end
+
   private 
     def self.process_uri(uri)
       image_url = URI.parse(uri)
